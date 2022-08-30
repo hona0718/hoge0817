@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.btn{
+  padding: 20px 25px;
+  text-decoration: none;
+  border-radius: 5%;
+  display: inline-block;
+}
+.blue{
+  background-color: turquoise;
+  color: #FFFFFF;
+}
+.white{
+  background-color: #FFFFFF;
+  color: turquoise;
+  border: 1px solid turquoise;
+}
+.header {
+  margin: 0 30px;
+  padding: 10px;
+}
+.ttl1{
+  background-color: aliceblue;
+}
+.ttl2{
+  background-color: whitesmoke;
+}
+.ttl3{
+  background-color: beige;
+}
+.btn_a{
+  margin: 60px 30px;
+}
+.btn_b{
+  position: relative;
+}
+.btn_b::before{
+  display: block;
+  content: "+";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 95%;
+}
+.btn_c{
+  font-size: 24px;
+  font-weight: bold;
+}
