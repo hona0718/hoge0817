@@ -1,95 +1,46 @@
 @charset "utf-8";
 
-#page-top {
-    bottom: 0;
-    position: fixed;
-    right: 0;
-  }
-  #page-top a {
-    background-color: #1cb4d3;
-    color: #fff;
-    padding: 0.5rem 1rem;
-  }
-  /* レイアウトのためのcss */
-  body {
-    position: relative;
-  }
-  a {
-    display: block;
-    text-decoration: none;
-  }
-  .header {
-    background-color: #eee;
-    padding: 20px 0;
-    width: 100%;
-  }
-  .header ul {
+  /* gapの勉強 */
+  main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    row-gap: 120px;
+    padding-bottom: 120px;
+    background-color: slategray;
   }
-  .header li {
-    font-size: 15px;
+  section{
+    padding: 20px 40px;
+    background-color: #eee;
+    margin: 0 30px;
+  }
+  ul {
+    display: flex;
+    column-gap: 32px;
+  }
+  li{
     list-style-type: none;
   }
-  .header li:not(:first-of-type) {
-    margin-left: 1rem;
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    background-color: slategray;
   }
-  .header a {
-    color: #000;
+  @media screen and (max-width:640px){
+    .container{
+      /* display: block; */
+      background-color: burlywood;
+    }
   }
-  section {
-    margin: 100px auto;
-    padding: 20px;
-    text-align: center;
-    width: 80%;
+  /* flex-wrapでグリッドシステム */
+  .m-box{
+    width: 385px;
+    height: 192px;
+    background-color: aquamarine;
   }
-  
-  h2 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-  p {
-    line-height: 1.5;
-  }
-  .works {
-    background-color: #bcffdd;
-  }
-  .gallery {
-    background-color: #bcbcff;
-  }
-  .service {
-    background-color: #ffbcbc;
-  }
-  .about {
-    background-color: #ffffbc;
-  }
-  .footer {
-    background-color: #000;
-    padding: 20px 0;
-  }
-  .footer p {
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-  }
-  .footer small {
-    color: #fff;
-    display: block;
-    text-align: center;
-  }
-  .btn_test{
-    padding: 30px;
-    background: black;
-    color: #FFF;
-    transition: all .3s;
-    border: 1px solid #000;
-    /* outline: 1px solid #000; */
-  }
-  .btn_test:hover{
-    background: white;
-    color: #000;
-    border: 1px solid #000;
-    /* outline: 1px solid #000; */
-    box-sizing: border-box;
+  .s-box{
+    width: 246px;
+    height: 126px;
+    background-color: aliceblue;
   }
