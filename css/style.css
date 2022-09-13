@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 30px;
-    background-color: slategray;
+    background-color: pink;
   }
   @media screen and (max-width:640px){
     .container{
@@ -44,3 +44,111 @@
     height: 126px;
     background-color: aliceblue;
   }
+
+  .container{
+  border:3px solid #21a8cd;
+  padding:10px;
+  display : flex;
+  flex-wrap : wrap;
+  justify-content:space-between;
+}
+.container::after{
+  content:"";
+  display: block;
+  width:30%;
+}
+.item{
+  border:3px solid #ae21cd;
+  padding:10px;
+  margin-bottom:10px;
+  box-sizing:border-box;
+  width:30%;
+
+}
+
+/* コンテンツが余るときのflex-wrap */
+.container{
+  border:3px solid #21a8cd;
+  padding:10px;
+  display : flex;
+  flex-wrap : wrap;
+  justify-content:space-between;
+}
+.container::before{
+  content:"";
+  display: block;
+  width:23%;
+  order:1;
+}
+.container::after{
+  content:"";
+  display: block;
+  width:23%;
+}
+.item{
+  border:3px solid #ae21cd;
+  padding:10px;
+  margin-bottom:10px;
+  box-sizing:border-box;
+  width:23%;
+
+}
+
+/* BEM */
+.card {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.card__img {
+  text-align: center;
+}
+
+.card__img img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__body {
+  padding: 16px 12px;
+}
+
+.card__time {
+  font-size: 13px;
+  display: inline-block;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.card__excerpt {
+  font-size: 14px;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  width: calc(33.3% - 16px * 2 / 3);
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+.cards__item:nth-child(-n + 3) {
+  margin-top: 0;
+}
+
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
